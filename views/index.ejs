@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Notes API</title>
+
+    <style>
+
+        body {
+
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+            background-color: #f4f4f4;
+
+            color: #333;
+
+            margin: 0;
+
+        }
+
+
+
+        h2 {
+
+            text-align: center;
+
+            color: #2c3e50;
+
+        }
+
+
+
+        .container {
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            margin-top: 50px;
+
+        }
+
+
+
+        table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 20px;
+
+        }
+
+
+
+        th,
+
+        td {
+
+            padding: 12px 15px;
+
+            border: 1px solid #ddd;
+
+            text-align: left;
+
+        }
+
+
+
+        thead {
+
+            background-color: #3498db;
+
+            color: white;
+
+        }
+
+
+
+        tr:nth-child(even) {
+
+            background-color: #f9f9f9;
+
+        }
+
+
+
+        .description {
+
+            margin-top: 10px;
+
+            font-size: 16px;
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+    <!-- AuthRoute.js -->
+
+    <div class="container">
+
+        <h2>Selamat Datang di Projek Praktikum TCC - Kelas IF-B</h2>
+
+        <p class="description">Berikut adalah daftar endpoint API untuk fitur <strong>AuthRoute.js</strong>:</p>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Metode</th>
+
+                    <th>Endpoint</th>
+
+                    <th>Deskripsi</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>POST</td>
+
+                    <td>/register</td>
+
+                    <td>Mendaftarkan pengguna baru dengan data username, email, dan password.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>POST</td>
+
+                    <td>/login</td>
+
+                    <td>Melakukan autentikasi pengguna dan menghasilkan access token jika berhasil.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>DELETE</td>
+
+                    <td>/logout</td>
+
+                    <td>Memperbarui status logout pengguna dan menghapus token sesi yang aktif.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>GET</td>
+
+                    <td>/token</td>
+
+                    <td>Memperbarui atau mendapatkan ulang access token menggunakan refresh token yang valid.</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- FoodRoute.js -->
+
+    <div class="container">
+
+        <h2>Selamat Datang di Projek Praktikum TCC - Kelas IF-B</h2>
+
+        <p class="description">Berikut adalah daftar endpoint API untuk fitur <strong>FoodRoute.js</strong>:</p>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Metode</th>
+
+                    <th>Endpoint</th>
+
+                    <th>Deskripsi</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>GET</td>
+
+                    <td>/</td>
+
+                    <td>Mendapatkan daftar seluruh data makanan (food) yang tersedia.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>POST</td>
+
+                    <td>/</td>
+
+                    <td>Menambahkan data makanan baru ke dalam database.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>PUT</td>
+
+                    <td>/:id</td>
+
+                    <td>Memperbarui data makanan berdasarkan ID tertentu.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>DELETE</td>
+
+                    <td>/:id</td>
+
+                    <td>Menghapus data makanan berdasarkan ID tertentu.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>GET</td>
+
+                    <td>/:id/food</td>
+
+                    <td>Mendapatkan daftar makanan terkait berdasarkan ID (misalnya kategori atau restoran tertentu).
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+
+
+    <!-- RestaurantRoute.js -->
+
+    <div class="container">
+
+        <h2>Selamat Datang di Projek Praktikum TCC - Kelas IF-B</h2>
+
+        <p class="description">Berikut adalah daftar endpoint API untuk fitur <strong>RestaurantRoute.js</strong>:</p>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Metode</th>
+
+                    <th>Endpoint</th>
+
+                    <th>Deskripsi</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>GET</td>
+
+                    <td>/</td>
+
+                    <td>Mengambil daftar semua restoran yang tersedia.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>POST</td>
+
+                    <td>/</td>
+
+                    <td>Menambahkan restoran baru ke dalam database.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>PUT</td>
+
+                    <td>/:id</td>
+
+                    <td>Memperbarui data restoran berdasarkan ID tertentu.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>DELETE</td>
+
+                    <td>/:id</td>
+
+                    <td>Menghapus restoran berdasarkan ID tertentu.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>GET</td>
+
+                    <td>/:id</td>
+
+                    <td>Mendapatkan detail restoran berdasarkan ID.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>GET</td>
+
+                    <td>/:id/review</td>
+
+                    <td>Mendapatkan daftar ulasan (review) untuk restoran tertentu berdasarkan ID.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>GET</td>
+
+                    <td>/:id/food</td>
+
+                    <td>Mendapatkan daftar makanan yang tersedia di restoran berdasarkan ID restoran.</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+
+
+    <div class="container">
+
+        <h2>Selamat Datang di Projek Praktikum TCC - Kelas IF-B</h2>
+
+        <p class="description">Berikut adalah daftar endpoint API untuk fitur <strong>ReviewRoute.js</strong>:</p>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Metode</th>
+
+                    <th>Endpoint</th>
+
+                    <th>Deskripsi</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>GET</td>
+
+                    <td>/</td>
+
+                    <td>Mendapatkan daftar seluruh ulasan (review) yang ada.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>POST</td>
+
+                    <td>/</td>
+
+                    <td>Menambahkan ulasan baru ke dalam sistem.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>PUT</td>
+
+                    <td>/:id</td>
+
+                    <td>Memperbarui ulasan berdasarkan ID tertentu.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>DELETE</td>
+
+                    <td>/:id</td>
+
+                    <td>Menghapus ulasan berdasarkan ID tertentu.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>GET</td>
+
+                    <td>/:id</td>
+
+                    <td>Mendapatkan detail ulasan berdasarkan ID.</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
